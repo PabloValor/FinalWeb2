@@ -1,3 +1,7 @@
-/**
- * Created by pablo on 9/15/2015.
- */
+( function() {
+    'use strict';
+    var app = angular.module('DirtyTrucks',[
+        'DirtyTrucks.controller',
+        'DirtyTrucks.services'
+    ]);
+})();
