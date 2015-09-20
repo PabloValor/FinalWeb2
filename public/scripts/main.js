@@ -1,4 +1,6 @@
 $(document).on('ready', function() {
+    'use strict';
+
     console.info("DOM ready...");
     $.ajax({
         url: 'API/about',

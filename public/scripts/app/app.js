@@ -1,4 +1,4 @@
-( function() {
+(function() {
     'use strict';
 
     var BASE_PATH = 'public/scripts/app/views/';

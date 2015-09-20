@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Dirty Trucks Inc.</title>
+    <link rel="shortcut icon" href="favicon.ico" />
 </head>
 <body>
     <h1>Dirty Trucks Inc.</h1>
