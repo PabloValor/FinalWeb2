@@ -5,6 +5,7 @@
 
     var app = angular.module('DirtyTrucks',[
         'ngRoute',
+        'DirtyTrucks.directives',
         'DirtyTrucks.controller',
         'DirtyTrucks.services'
     ]);
