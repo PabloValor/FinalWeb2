@@ -13,10 +13,11 @@
     app.config(['$routeProvider', function($routeProvider){
         $routeProvider
             .when('/',{
-                templateUrl: BASE_PATH + 'home.php'
+                redirectTo: '/login'
             })
-            .when('/about',{
-                redirectTo: '/'
+            .when('/login',{
+                templateUrl: BASE_PATH + 'login.php',
+                controller: 'loginController'
             })
             .otherwise({
                 redirectTo: '/'

@@ -2,7 +2,7 @@
 
 require 'Slim/Slim.php';
 require 'Database.php';
-use \API\Database;
+use \API\Database\Database;
 
 \Slim\Slim::registerAutoloader();
 
@@ -19,6 +19,29 @@ $app->get('/about', function(){
     $json = json_encode($data);
     echo $json;
 });
+
+$app->get('/getAllEmployees', 'getAllEmployees');
+
+function getAllEmployees(){
+    try {
+        $db = new Database();
+        $db = $db->getDB();
+        $sqlQuery = "SELECT * FROM empleados";
+
+        $statement = $db->query($sqlQuery);
+        $rows = $statement->fetchAll(PDO::FETCH_OBJ);
+
+        $db = null;
+
+        if(count($rows)) {
+            echo json_encode($rows);
+        } else {
+            echo json_encode('{ "success": "ERROR" }');
+        }
+    } catch(PDOException $ex) {
+        echo json_encode('{"error":'. $ex->getMessage() . '}');
+    }
+}
 
 $app->get(
     '/',
