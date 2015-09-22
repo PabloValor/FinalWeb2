@@ -8,7 +8,7 @@ use \API\Database\Database;
 
 $app = new \Slim\Slim();
 
-$app->get('/about', function(){
+/*$app->get('/about', function(){
     //$db = new Database();
     //$db.getDB();
     $data = '{
@@ -18,7 +18,7 @@ $app->get('/about', function(){
         }';
     $json = json_encode($data);
     echo $json;
-});
+});*/
 
 $app->get('/getAllEmployees', 'getAllEmployees');
 

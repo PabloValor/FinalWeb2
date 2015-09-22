@@ -6,8 +6,7 @@
         .directive('test', function(){
             return {
                 restrict: 'E',
-                templateUrl: BASE_PATH + 'partials/test.php',
-                controller: loginController
+                templateUrl: BASE_PATH + 'partials/test.php'
             }
         })
 })();

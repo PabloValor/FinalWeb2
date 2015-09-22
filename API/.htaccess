@@ -6,6 +6,8 @@ RewriteEngine On
 #
 #  RewriteBase /
 
+# AddType  application/font-woff2  .woff2
+
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteRule ^ index.php [QSA,L]
