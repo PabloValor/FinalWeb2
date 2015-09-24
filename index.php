@@ -20,7 +20,10 @@
     <script type="text/javascript" src="public/scripts/vendor/angular.min.js"></script>
     <script type="text/javascript" src="public/scripts/vendor/materialize.js"></script>
 
+
     <script type="text/javascript" src="public/scripts/vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="public/scripts/vendor/angular-ui-router.min.js"></script>
+    <script type="text/javascript" src="public/scripts/vendor/angular-materialize.js"></script>
     <script type="text/javascript" src="public/scripts/app/directives.js"></script>
     <script type="text/javascript" src="public/scripts/app/controllers.js"></script>
     <script type="text/javascript" src="public/scripts/app/services.js"></script>

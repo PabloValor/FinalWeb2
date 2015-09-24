@@ -7,7 +7,9 @@
         'ngRoute',
         'DirtyTrucks.directives',
         'DirtyTrucks.controller',
-        'DirtyTrucks.services'
+        'DirtyTrucks.services',
+        'ui.materialize',
+        'ui.router'
     ]);
 
     app.config(['$routeProvider', function($routeProvider){
