@@ -1,18 +1,19 @@
-<!-- Modal Trigger -->
-<div class="col">
-    <a class='btn' href='#demoModal' modal>Show Modal</a>
-</div>
-<!-- Modal Structure -->
-<div id="demoModal" class="modal">
-    <div class="modal-content">
-        <h4>Modal header</h4>
-        <ul>
-            <li ng-repeat="employee in employees">
-                {{employee.Nombre }} {{employee.Apellido}} Edad: {{employee.Edad}}
-            </li>
-        </ul>
+<form ng-submit="login()">
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="user" type="text" class="validate" ng-model="formData.user" required>
+            <label for="user" data-error="mal" data-success="">Usuario</label>
+        </div>
     </div>
-    <div class="modal-footer">
-        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    <div class="row">
+        <div class="input-field col s12">
+            <input id="password" type="password" class="validate" ng-model="formData.password" required>
+            <label for="password" data-error="mal" data-success="">Password</label>
+        </div>
     </div>
-</div>
+    <div class="row">
+        <div class="input-field col s12">
+            <input type="submit" class="btn-large">
+        </div>
+    </div>
+</form>

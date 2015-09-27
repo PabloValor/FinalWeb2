@@ -13,8 +13,19 @@
                 return deferred.promise;
             }
 
+            function login(formData) {
+
+                var deferred = $q.defer();
+                $http.post('API/login',formData)
+                    .success(function(data){
+                        deferred.resolve(data)
+                    });
+                return deferred.promise;
+            }
+
             return {
-                getAllEmployees: getAllEmployees
+                getAllEmployees: getAllEmployees,
+                login: login
             }
         }]);
 })();

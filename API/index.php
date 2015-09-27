@@ -22,6 +22,28 @@ $app = new \Slim\Slim();
 
 $app->get('/getAllEmployees', 'getAllEmployees');
 
+$app->post('/login',  function () use ($app){
+    $app->response()->headers->set('Content-Type', 'application/json');
+    $dummyUser = 'admin';
+    $dummyPassword = 123456;
+
+    // get and decode JSON request body
+    $request = $app->request();
+    $body = $request->getBody();
+    $inputs = json_decode($body);
+
+    $paramUser = $inputs->user;
+    $paramPassword = $inputs->password;
+
+    // dummy authentication test
+    if($dummyUser == $paramUser && $dummyPassword == $paramPassword) {
+        $response = ["status" => "ok"];
+    } else {
+        $response = ["status" => "error"];
+    }
+    echo json_encode($response);
+});
+
 function getAllEmployees(){
     try {
         $db = new Database();
@@ -42,6 +64,11 @@ function getAllEmployees(){
         echo json_encode('{"error":'. $ex->getMessage() . '}');
     }
 }
+
+ /*function login() {
+     $app = \Slim\Slim::getInstance();
+     $body = $app->request->getBody();
+ }*/
 
 $app->get(
     '/',

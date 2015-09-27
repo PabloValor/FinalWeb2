@@ -12,14 +12,14 @@
     <link rel="stylesheet" href="public/css/main.css"/>
 </head>
 <body>
-    <h1>Dirty Trucks Inc.</h1>
-
-    <ng-view></ng-view>
+    <div class="container">
+        <h1 class="center-align">Dirty Trucks Inc.</h1>
+        <ng-view></ng-view>
+    </div>
 
     <script type="text/javascript" src="public/scripts/vendor/jquery-2.1.4.min.js"></script>
     <script type="text/javascript" src="public/scripts/vendor/angular.min.js"></script>
     <script type="text/javascript" src="public/scripts/vendor/materialize.js"></script>
-
 
     <script type="text/javascript" src="public/scripts/vendor/angular-route.min.js"></script>
     <script type="text/javascript" src="public/scripts/vendor/angular-ui-router.min.js"></script>

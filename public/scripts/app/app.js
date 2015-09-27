@@ -21,6 +21,9 @@
                 templateUrl: BASE_PATH + 'login.php',
                 controller: 'loginController'
             })
+            .when('/app',{
+                templateUrl: BASE_PATH + 'app.php'
+            })
             .otherwise({
                 redirectTo: '/'
             });
