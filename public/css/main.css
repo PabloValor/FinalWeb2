@@ -1,4 +1,5 @@
 body {
+    background: #f6f6f6;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -7,6 +8,7 @@ body {
 }
 
 form {
+    padding: 5px 10px;
     max-width: 500px;
     margin: 0 auto;
 }

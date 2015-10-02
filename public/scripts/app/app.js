@@ -5,6 +5,7 @@
 
     var app = angular.module('DirtyTrucks',[
         'ngRoute',
+        'ngResource',
         'DirtyTrucks.directives',
         'DirtyTrucks.controller',
         'DirtyTrucks.services',
@@ -12,20 +13,19 @@
         'ui.router'
     ]);
 
-    app.config(['$routeProvider', function($routeProvider){
+    app.config(['$routeProvider', '$resourceProvider', function($routeProvider, $resourceProvider){
         $routeProvider
-            .when('/',{
-                redirectTo: '/login'
-            })
             .when('/login',{
                 templateUrl: BASE_PATH + 'login.php',
                 controller: 'loginController'
             })
-            .when('/app',{
-                templateUrl: BASE_PATH + 'app.php'
+            .when('/home',{
+                templateUrl: BASE_PATH + 'home.php'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/login'
             });
+        // Don't strip trailing slashes from calculated URLs
+        $resourceProvider.defaults.stripTrailingSlashes = false;
     }]);
 })();

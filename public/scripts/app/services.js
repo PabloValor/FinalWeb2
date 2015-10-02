@@ -1,31 +1,17 @@
 (function(){
     'use strict';
     angular.module('DirtyTrucks.services',[])
-        .factory('dirtyTrucksService',['$http', '$q', function($http, $q){
-
-            function getAllEmployees(){
-                var deferred = $q.defer();
-
-                $http.get('API/getAllEmployees', {cache: true})
-                    .success(function(data){
-                        deferred.resolve(data)
-                    });
-                return deferred.promise;
-            }
-
-            function login(formData) {
-
-                var deferred = $q.defer();
-                $http.post('API/login',formData)
-                    .success(function(data){
-                        deferred.resolve(data)
-                    });
-                return deferred.promise;
-            }
+        .factory('PostLogin',['$resource', function($resource){
+            //return $resource('API/login');
+                var dummyTest = $resource('http://jsonplaceholder.typicode.com/users');
+                var dummyCollection = dummyTest.get(function() {
+                    var dummyUser = dummyCollection[0];
+                    debugger;
+                });
 
             return {
-                getAllEmployees: getAllEmployees,
-                login: login
+                PostLogin: dummyCollection
             }
-        }]);
+    }]);
+
 })();

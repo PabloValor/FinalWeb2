@@ -4,6 +4,9 @@ require 'Slim/Slim.php';
 require 'Database.php';
 use \API\Database\Database;
 
+session_cache_limiter(false);
+session_start();
+
 \Slim\Slim::registerAutoloader();
 
 $app = new \Slim\Slim();

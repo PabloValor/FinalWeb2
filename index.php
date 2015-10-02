@@ -9,6 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 
     <link rel="stylesheet" href="public/css/vendor/materialize.css"/>
+    <!--<link rel="stylesheet" href="public/css/vendor/angular-busy.css"/>-->
     <link rel="stylesheet" href="public/css/main.css"/>
 </head>
 <body>
@@ -22,6 +23,8 @@
     <script type="text/javascript" src="public/scripts/vendor/materialize.js"></script>
 
     <script type="text/javascript" src="public/scripts/vendor/angular-route.min.js"></script>
+    <script type="text/javascript" src="public/scripts/vendor/angular-resource.min.js"></script>
+    <!--<script type="text/javascript" src="public/scripts/vendor/angular-busy.js"></script>-->
     <script type="text/javascript" src="public/scripts/vendor/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="public/scripts/vendor/angular-materialize.js"></script>
     <script type="text/javascript" src="public/scripts/app/directives.js"></script>
